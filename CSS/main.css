@@ -1,0 +1,304 @@
+body, html {
+    height: 100%;
+    margin: 0px;
+}
+/* 
+I wanted a parallax effect and I was having difficulty figuring it out,
+even with w3school's description of it. So I opened up the source code
+for an example they gave and studied that to create the effect. 
+*/
+.img1, .img2, .img3, .img4, .img5 {
+    position: relative; /*allows the image to be positioned relative to its original/natural position without affecting the position of other elements (same space allotted as if static)*/
+    opacity:0.65; /*creates a bit of opacity/white overlay to allow content on top to be more visible and to keep the image a background focus*/
+    background-attachment: fixed; /*keep the image fixed in position and not moving along with the page as one scrolls*/
+    background-position: center; /*have the center of the image be the focus*/
+    background-repeat: no-repeat; /*keeps a single image as opposed to multiples. Works with following property of cover*/
+    background-size: cover; /*stretch the image so that it covers 100% page width*/
+}
+
+.img1 {
+    background-image: url("../Images/SW\ Scariff\ Imperial\ Vault\ .jpg");
+    min-height: 80%;
+}
+
+.img2 {
+    background-image: url(../Images/the_settlement_exhbition_025_-rroman_gerasynenko.jpeg);
+    min-height: 80%;
+}
+
+.img3 {
+    background-image: url("../Images/Take\ that\ Al.mp4");
+    min-height: 80%;
+}
+
+.img4 {
+    background-image: url("../Images/Ragbrai.png");
+    min-height: 80%;
+}
+
+.img5 {
+    background-image: url(../Images/dad\ nails.JPG);
+    min-height: 80%;
+
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    color: #000000
+}
+
+.caption2 {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    color: #000000
+}
+
+.caption span.border {
+    background-color: black;
+    opacity: none;
+    color: #fff;
+    padding: 18px;
+    font-size: 45px;
+    letter-spacing: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.caption2 span.border {
+    background-color: black;
+    opacity: none;
+    color: #fff;
+    padding: 18px;
+    font-size: 45px;
+    letter-spacing: 8px;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+#nav-p {
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.divider-p {
+    margin-top: 40px;
+    font-size: 30px;
+    position: absolute;
+    left: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 18px;
+    font-size: 26px;
+    letter-spacing: 5px;
+    z-index: 2;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.proImg { /* How do I get the image to stay center regardless of scree variance?*/
+    width: 400px;
+    border-radius: 70%;
+    margin-right: 40%;
+    margin-top: 3%;
+    position:relative;
+    z-index:1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #000000;
+    position: -webkit-sticky; /*having difficulties making this sticky*/
+    position: sticky;
+    top: 0;
+}
+
+nav li {
+    float: left;
+    display: inline;
+    margin: 20px;
+    font-size: 22px;
+    border-right: 2px solid #cbb279;
+    padding-right: 10px; /*How do I get my borders evenly spaced?*/
+}
+
+.nav-list-a {
+    display:inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16 px;
+    text-decoration: none;
+    border-right: 4px #cbb279;
+}
+
+.nav-list-a:hover {
+    color: #cbb279;
+}
+
+.post1 {
+    color: #777777;
+    font-size: 22px;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    text-align: center;
+    font-size: 46px;
+    margin-top: 0px;
+}
+
+.post2 {
+    background-color: #b99b6b;
+    /*background-color: rgba(0, 0, 0, 0.9);*/
+    color: black;
+    color: white;
+    border-color: black;
+    border-width: 2px;
+    text-align: center;
+    padding: 50px 80px;
+    box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post2 h3 {
+    font-size: 28px;
+    text-shadow: 1px 1px black;
+}
+
+.divider-links {
+    color: #ac2626;
+}
+
+.nerd-emp {
+    color:darkolivegreen;
+    text-shadow: 1.5px 1.5px black;
+    font-size: 32px;
+}
+
+.contact {
+    width: 25%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+}
+
+.text-area {
+   width: 25%;
+   padding-top: 15px;
+   padding-left: 8px;
+   margin: 8px 0px;
+   box-sizing: border-box;
+   border: 2px solid black;
+   border-radius: 8px;
+   font-size: 14px;
+}
+
+.message-area {
+    width: 33%;
+    height: 150px;
+    padding-top: 15px;
+   padding-left: 8px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    resize: none; 
+}
+
+.right-article {
+    text-align: right justify;
+    width: 33%;
+    font-size: 56px;
+    text-shadow: 2px 2px black;
+    padding-top: 0px;
+}
+
+footer {
+    box-sizing:border-box;
+    background-color: black;
+    height: 100px;
+}
+
+#ct-button { /*I am trying to make a black button/box around the Coding Temple gradient text, but I cannot seem to get it to work...why?*/
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+}
+
+.codingtemple1 {
+      background-color: #ffeea6;
+      background-image: linear-gradient(to right, #ffeea6 20%, #0cc4a0);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+/*.codingtemple {  
+    /*
+    This represents my attempt at creating a gradient text 
+    color to match the Coding Temple style. I looked at the 
+    Coding Temple Style sheet to find the above code 
+    (called codingtemple1). I am a bit unsure where I am off, 
+    but would appreciate some help figuring it out!
+    */
+   /* text-decoration: none;
+    background-color: #12c5a0; /*Backup color in case the browser doesn't support gradients */
+   /* background-image: linear-gradient (to right, #ffeea6, #12c5a0); /*Using the gradient as the background with a transparent text mask over it*/
+   /* background-size: 100%; /*This allows the gradient to cover the full width and height of the text*/
+   /* -webkit-background-clip: text;
+   /* -webkit-text-fill-color: transparent; /* this removes the fill from the text allowing the gradient to be visible*/
+*/ 
+
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+ .button1:hover {
+    box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.4);
+ }
+
+/*
+What is missing: (Check reqs to make sure I got it all. Also reach out to weekend TA for help with questions.)
+  Figure out sticky navbar
+  create a footer
+  create research page (include an example of my research idea with the dropdown card upon click, etc.)
+  create nerd page (include a submission form or poll about favorite alltime games, systems, game of the year, etc.)
+  create cycling page (perhaps)
+  create dad page (perhaps)
+  */
